@@ -1,0 +1,119 @@
+.giftbuilder-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: #000;
+}
+
+.giftbuilder-wrapper .productrow-container:not(:last-child) {
+    position: relative;
+    border-bottom: 3px solid #D9D9D9;
+}
+
+.giftbuilder-wrapper .productrow-container:not(:last-child)::before {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    background-image: url('https://ucds.ams3.digitaloceanspaces.com/AvonGifting/gift-plus-sign.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    content: '';
+
+}
+
+.giftbuilder-headline {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    color: #000;
+    text-align: center;
+    border-bottom: 1px dotted #D9D9D9;
+}
+
+.giftbuilder-wrapper h4 {
+    color: #000;
+    margin-bottom: 24px;
+}
+
+.giftbuilder-wrapper h4 span {
+    font-weight: 500;
+}
+
+.giftbuilder-wrapper h3 {
+    color: #7F28C4;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .giftbuilder-wrapper h4,
+    h3 {
+        padding: 0 16px;
+        font-size: 16px;
+    }
+}
+
+.giftbuilder-wrapper h3 {
+    font-weight: 700;
+}
+
+.productrow-container {
+    margin: 40px 0 0;
+    padding-bottom: 40px;
+
+}
+
+.productsrow {
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productsrow .product-card:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.productsrow .product-card {
+    margin: 8px 16px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .productsrow .product-card {
+        margin: 8px auto;
+    }
+
+    .productsrow .product-card:nth-child(odd) {
+        margin-right: auto;
+        margin-left: 0;
+
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .productsrow {
+        width: calc(100% - 28px);
+
+    }
+}
+
+
+.productrow-header {
+    margin: 0 auto;
+}
+
+.productrow-header .productrow-number {
+    font-weight: 700;
+    color: #000;
+}
+
+.productrow-header p.productrow-title {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.3;
+}

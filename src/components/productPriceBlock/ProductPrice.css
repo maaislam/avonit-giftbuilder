@@ -1,0 +1,16 @@
+.product-price-container {
+    margin: 0 0 16px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #7f28c4;
+}
+
+.product-price-container .original-price {
+    margin-left: 12px;
+    font-size: 14px;
+    color: #e5231b;
+    text-decoration: line-through;
+
+}

@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "yotpo-widget-font";
+    src: url("//staticw2.yotpo.com/assets/yotpo-widget-font.eot?version=2022-05-29_15-21-54");
+    src: url("//staticw2.yotpo.com/assets/yotpo-widget-font.eot?version=2022-05-29_15-21-54#iefix") format("embedded-opentype"), url("//staticw2.yotpo.com/assets/yotpo-widget-font.woff?version=2022-05-29_15-21-54") format("woff"), url("//staticw2.yotpo.com/assets/yotpo-widget-font.ttf?version=2022-05-29_15-21-54") format("truetype"), url("//staticw2.yotpo.com/assets/yotpo-widget-font.svg?version=2022-05-29_15-21-54") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.yotpo-bottomLine {
+    margin-bottom: 10px;
+}
+
+.yotpo-bottomLine.rating-invisible {
+    opacity: 0;
+}
+
+.yotpo-rev-count {
+    margin-left: 4px;
+    font-size: 10px !important;
+    line-height: 15px;
+}
+
+
+
+.yotpo-stars {
+    display: inline-flex;
+    margin-right: 4px;
+    background: -webkit-gradient(linear, left top, right top, from(#6B22C3), to(#DB495F));
+
+}
+
+.yotpo-icon {
+    display: block;
+    color: #ec008c;
+    font-size: 16px;
+    background-color: #fff;
+    mix-blend-mode: luminosity;
+}
+
+@media only screen and (max-width: 450px) {
+    .yotpo .yotpo-icon {
+        font-size: 14px !important;
+    }
+}
+
+.yotpo-icon::before {
+    content: "\e60e";
+    font-family: "yotpo-widget-font" !important;
+    background: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: content;
+    -webkit-text-fill-color: inherit;
+}
+
+.yotpo-icon.empty-star::before {
+    content: "\e61b";
+    font-family: "yotpo-widget-font" !important;
+    background: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: content;
+    -webkit-text-fill-color: inherit;
+}
+
+.yotpo-icon.half-star::before {
+    content: "\e61a";
+    font-family: "yotpo-widget-font" !important;
+    font-size: 16px;
+    background: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: content;
+    -webkit-text-fill-color: inherit;
+}
