@@ -42,6 +42,13 @@ const OfferBar = ({ bundledPrice }) => {
           Sku: variantSelected.Sku,
         };
       });
+      const gift = {
+        Campaign: window._ShopContext.CampaignNumber,
+        Quantity: 1,
+        Sku: '28792-18324365',
+      };
+      const plusGift = [...payloads, gift];
+      console.log(plusGift);
 
       const options = {
         method: 'POST',
@@ -49,7 +56,7 @@ const OfferBar = ({ bundledPrice }) => {
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(payloads),
+        body: JSON.stringify(plusGift),
       };
 
       const response = await fetch(addToCartEndpoint, options);
