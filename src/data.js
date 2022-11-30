@@ -10,7 +10,7 @@ export const pamperData = [
     btnText: 'COMPONI IL REGALO',
     choice1: {
       stepTitle: 'Scegli la perfetta finitura e tonalità per le labbra.',
-      handles: ['29736'],
+      handles: ['29736', '29219'],
     },
     choice2: {
       stepTitle: 'Scegli una tonalità di terra solare.',
@@ -23,7 +23,7 @@ export const pamperData = [
   },
   {
     name: 'Set per gli appassionati di mani e pedi',
-    currentPrice: 8,
+    currentPrice: 8.99,
     prevPrice: 49,
     priceMessage: '3 prodotti a 8,99€',
     image: 'gift-pamper2.png',
@@ -45,7 +45,7 @@ export const pamperData = [
   },
   {
     name: 'Set per gli esperti di skincare',
-    currentPrice: 12,
+    currentPrice: 34.99,
     prevPrice: 23,
     priceMessage: '3 prodotti a 34,99€',
     image: 'gift-pamper3.png',
@@ -87,46 +87,46 @@ export const pamperData = [
       handles: ['29755', '29763', '29760'],
     },
   },
-  {
-    name: 'Calm & Unwinding',
-    currentPrice: 12,
-    prevPrice: 14,
-    image: 'gift-pamper5.png',
-    description: 'Make a calm and unwinding gift to give a loved one some chill time.',
-    btnText: 'COMPONI IL REGALO',
-    dealTitle: 'Calm & Unwinding Gift Set – 3 for £12 (worth up to £14)',
-    choice1: {
-      stepTitle: 'Choose a scent-sational candle.',
-      handles: ['20420', '20482', '20483'],
-    },
-    choice2: {
-      stepTitle: 'Choose a relaxing bubble bath.',
-      handles: ['20484', '20421', '20485'],
-    },
-    choice3: {
-      stepTitle: 'Choose a luxurious body moisturiser.',
-      handles: ['20422', '20486', '20487'],
-    },
-  },
-  {
-    name: 'Cool & Groomed',
-    currentPrice: 15,
-    prevPrice: 18,
-    image: 'gift-pamper6.png',
-    description: 'Create a cool and groomed gift to keep them feeling fresh.',
-    btnText: 'COMPONI IL REGALO',
-    dealTitle: 'Cool & Groomed Gift Set – 3 for £15 (worth up to £18)',
-    choice1: {
-      stepTitle: 'Add the sophisticated washbag.',
-      handles: ['20506'],
-    },
-    choice2: {
-      stepTitle: 'Choose an invigorating aftershave.',
-      handles: ['20507', '20508', '20509'],
-    },
-    choice3: {
-      stepTitle: 'Choose an essential grooming product.',
-      handles: ['20510', '20511', '20512'],
-    },
-  },
+  // {
+  //   name: 'Calm & Unwinding',
+  //   currentPrice: 12,
+  //   prevPrice: 14,
+  //   image: 'gift-pamper5.png',
+  //   description: 'Make a calm and unwinding gift to give a loved one some chill time.',
+  //   btnText: 'COMPONI IL REGALO',
+  //   dealTitle: 'Calm & Unwinding Gift Set – 3 for £12 (worth up to £14)',
+  //   choice1: {
+  //     stepTitle: 'Choose a scent-sational candle.',
+  //     handles: ['20420', '20482', '20483'],
+  //   },
+  //   choice2: {
+  //     stepTitle: 'Choose a relaxing bubble bath.',
+  //     handles: ['20484', '20421', '20485'],
+  //   },
+  //   choice3: {
+  //     stepTitle: 'Choose a luxurious body moisturiser.',
+  //     handles: ['20422', '20486', '20487'],
+  //   },
+  // },
+  // {
+  //   name: 'Cool & Groomed',
+  //   currentPrice: 15,
+  //   prevPrice: 18,
+  //   image: 'gift-pamper6.png',
+  //   description: 'Create a cool and groomed gift to keep them feeling fresh.',
+  //   btnText: 'COMPONI IL REGALO',
+  //   dealTitle: 'Cool & Groomed Gift Set – 3 for £15 (worth up to £18)',
+  //   choice1: {
+  //     stepTitle: 'Add the sophisticated washbag.',
+  //     handles: ['20506'],
+  //   },
+  //   choice2: {
+  //     stepTitle: 'Choose an invigorating aftershave.',
+  //     handles: ['20507', '20508', '20509'],
+  //   },
+  //   choice3: {
+  //     stepTitle: 'Choose an essential grooming product.',
+  //     handles: ['20510', '20511', '20512'],
+  //   },
+  // },
 ];

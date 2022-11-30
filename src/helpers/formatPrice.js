@@ -1,4 +1,4 @@
-const formatPrice = (amount, code = 'en-GB', currency = 'GBP') => {
+const formatPrice = (amount, code = 'it-IT', currency = 'EUR') => {
   return new Intl.NumberFormat(code, {
     style: 'currency',
     currency,

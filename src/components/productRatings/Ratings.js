@@ -24,7 +24,7 @@ const Ratings = ({ rating, ratingCount }) => {
         <div className='standalon-bottomline'>
           <div className='yotpo-bottomlie pull-left'>
             <div className='yotpo-stars'>{ratingStars(rating)}</div>
-            <span className='yotpo-rev-count'>{ratingCount} Reviews</span>
+            <span className='yotpo-rev-count'>{ratingCount} Recensioni</span>
           </div>
         </div>
       </div>

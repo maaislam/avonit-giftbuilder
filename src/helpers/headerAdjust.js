@@ -1,7 +1,7 @@
 const headerAdjust = () => {
   const htmlStr = `<div class="meal-deal-breadcrumb">
     
-    <a href="/crea-il-tuo-regalo"><span> Back</span></a>
+    <a href="/crea-il-tuo-regalo"><span> Indietro</span></a>
   </div>`;
 
   const breadcrumbContainer = document.querySelector('#Breadcrumbs');

@@ -1,6 +1,8 @@
 (function () {
   const init = () => {
     const offerUrlContents = [
+      '29736',
+      '29738',
       '29738',
       '29734',
       '29735',

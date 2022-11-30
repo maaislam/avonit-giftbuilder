@@ -7,7 +7,7 @@ const ProductButton = ({ btnText, btnClickHandler }) => {
     <button
       type='submit'
       onClick={(e) => btnClickHandler(btnText)}
-      className={`${btnText === 'Remove' ? 'remove' : btnText === 'Out of stock' ? 'out-of-stock' : ''} btn product-primary-btn`}
+      className={`${btnText === 'Rimuovi' ? 'remove' : btnText === 'Esaurito' ? 'out-of-stock' : ''} btn product-primary-btn`}
     >
       {btnText}
     </button>

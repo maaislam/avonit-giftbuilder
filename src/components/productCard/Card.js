@@ -39,7 +39,7 @@ const Card = ({ cardData, selectedVariant, children, position }) => {
   const { selectedProducts, setSelectedProducts } = useContext(selectedProductContext);
   const { setChosenProduct } = useContext(ChosenProductContext);
   const { selectedGiftOption } = useContext(selectedGiftOptionContext);
-
+  console.log();
   useEffect(() => {
     const getImgs = async () => {
       const imgSrc = await getImages(ProfileNumber);
@@ -47,10 +47,10 @@ const Card = ({ cardData, selectedVariant, children, position }) => {
       setCardImages(imgSrc);
     };
 
-    const btnType = Variants.length > 1 ? 'Choose' : 'Select';
+    const btnType = Variants.length > 1 ? ' Scegli' : 'Seleziona';
     const isProductAdded = selectedProducts.some((item) => item.Id === Id);
 
-    setBtnText(isProductAdded ? 'Remove' : btnType);
+    setBtnText(isProductAdded ? 'Rimuovi' : btnType);
 
     getImgs();
   }, [Id, selectedProducts, Variants.length, ProfileNumber]);
@@ -58,9 +58,9 @@ const Card = ({ cardData, selectedVariant, children, position }) => {
   const btnClickHandler = (clickedBtnText) => {
     const popupContainer = document.getElementById('gift-builder-modal');
     //console.log(e.target.innerText);
-    const btnType = Variants.length > 1 ? 'Choose' : 'Select';
-    if (clickedBtnText === 'Select') {
-      //setBtnText('Remove');
+    const btnType = Variants.length > 1 ? ' Scegli' : 'Seleziona';
+    if (clickedBtnText === 'Seleziona') {
+      //setBtnText('Rimuovi');
       const variantSelected = !selectedVariant || Object.keys(selectedVariant).length === 0 ? Variants[0] : selectedVariant;
       const selectionData = [...selectedProducts, { ...cardData, cardImages, Variants, variantSelected }];
       //remove duplicates\\
@@ -79,19 +79,19 @@ const Card = ({ cardData, selectedVariant, children, position }) => {
       setSelectedProducts(uniqueSelectionData);
       setPopupState(false);
       popupContainer.classList.remove('active');
-      setBtnText('Remove');
+      setBtnText('Rimuovi');
       const lastSelectedItem = uniqueSelectionData[uniqueSelectionData.length - 1];
       gaTracking(
         `User selects product from ${lastSelectedItem.stepId} title: ${lastSelectedItem.Name} - ${selectedGiftOption.name}`
       );
-    } else if (clickedBtnText === 'Choose') {
-      //const btnType = variants.length > 1 && !popupState ? 'Choose' : 'Select';
+    } else if (clickedBtnText === ' Scegli') {
+      //const btnType = variants.length > 1 && !popupState ? ' Scegli' : 'Seleziona';
       const selectionData = [...selectedProducts];
       setSelectedProducts(selectionData);
       setPopupState(true);
       setChosenProduct({ ...cardData, cardImages, Variants });
       popupContainer.classList.add('active');
-    } else if (clickedBtnText === 'Remove') {
+    } else if (clickedBtnText === 'Rimuovi') {
       setBtnText(btnType);
       const updatedState = selectedProducts.filter((item) => item.Id !== Id);
       setSelectedProducts(updatedState);
@@ -124,7 +124,7 @@ const Card = ({ cardData, selectedVariant, children, position }) => {
 
         {children}
         {Availability === 1 ? (
-          <ProductButton btnText={`${children ? 'Select' : btnText}`} btnClickHandler={btnClickHandler} />
+          <ProductButton btnText={`${children ? 'Seleziona' : btnText}`} btnClickHandler={btnClickHandler} />
         ) : (
           renderOutofstock()
         )}

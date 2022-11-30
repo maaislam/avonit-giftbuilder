@@ -10,7 +10,7 @@ const OfferBar = ({ bundledPrice }) => {
   const { selectedProducts, setSelectedProducts } = useContext(selectedProductContext);
   const { selectedGiftOption } = useContext(selectedGiftOptionContext);
 
-  const [addtoCart, setAddtoCart] = useState('Add-to-bag');
+  const [addtoCart, setAddtoCart] = useState('Aggiungi-al-carrello');
 
   //console.log(selectedProducts);
 
@@ -62,13 +62,13 @@ const OfferBar = ({ bundledPrice }) => {
       const response = await fetch(addToCartEndpoint, options);
       const data = await response.json();
       console.log(data);
-      setAddtoCart('Added-to-bag');
+      setAddtoCart('Aggiunto-al-carrello');
       //setSelectedProducts([]);
       gaTracking(`user added ${selectedGiftOption.name} to cart`);
       localStorage.setItem('avon-mealdeal-preselected', JSON.stringify(selectedGiftOption));
       window.location.href = window.location.href.split('#')[0];
     };
-    addtoCart === 'Adding-to-bag' && setTimeout(addAllToCart, 1000);
+    addtoCart === 'Aggiunta-al-carrello' && setTimeout(addAllToCart, 1000);
   }, [addtoCart, imagesData, selectedGiftOption, setSelectedProducts]);
 
   return (
@@ -95,8 +95,8 @@ const OfferBar = ({ bundledPrice }) => {
             <div className='offer-details'>
               <ProductPrice listPrice={total} salePrice={bundledPrice} />
             </div>
-            <div className={`addtocart-btn ${addtoCart || 'add-to-bag'}`} onClick={() => setAddtoCart('Adding-to-bag')}>
-              {addtoCart.split('-').join(' ') || 'Add to bag'}
+            <div className={`addtocart-btn ${addtoCart || 'add-to-bag'}`} onClick={() => setAddtoCart('Aggiunta-al-carrello')}>
+              {addtoCart.split('-').join(' ') || 'Aggiungi al carrello'}
             </div>
           </>
         ) : (

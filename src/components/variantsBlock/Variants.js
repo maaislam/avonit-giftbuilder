@@ -23,7 +23,7 @@ const Variants = ({ variants, selected, onSelectionChange }) => {
   return (
     <div className='variant-wrapper'>
       <div className='variant-header'>
-        <div className='variant-header--label'>Selected {`${variants[selectedSwatchIdx].Image ? 'shade:' : 'size:'}`}</div>
+        <div className='variant-header--label'>Seleziona un {`${variants[selectedSwatchIdx].Image ? 'colore:' : 'taglia:'}`}</div>
         <div className='variant-header--title'>{variants[selectedSwatchIdx].Name}</div>
       </div>
       <div className='variant-options'>{variantOptions}</div>

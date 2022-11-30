@@ -40,11 +40,11 @@ const GiftBuilder = ({ pageData, currentSelection }) => {
   return (
     <div className='giftbuilder'>
       <div className='giftbuilder-wrapper'>
-        <h1 className='giftbuilder-headline'>Build A Gift</h1>
+        <h1 className='giftbuilder-headline'>Crea il tuo regalo</h1>
         <h4>
           <span>{dealTitle}</span>.
         </h4>
-        {bundledPrice ? <h3>{`Offer price: ${formatPrice(bundledPrice)}`}</h3> : ''}
+        {bundledPrice ? <h3>{`La tua offerta a ${formatPrice(bundledPrice)}`}</h3> : ''}
         {allData ? (
           <>
             <ProductRows rowsData={allData} />
